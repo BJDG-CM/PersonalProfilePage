@@ -5,23 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects</title>
-    <link rel="stylesheet" href="../style.css">
-    <script src="../script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
-<body>
+<body class="projects">
     <header>
-        <h1>My Projects</h1>
+        <div id="overlay"></div>
+        <button id="menuToggle" class="menu-toggle" aria-label="Toggle Menu">☰</button>
+        <h1>Projects</h1>
         <button id="darkModeToggle" aria-label="Toggle Dark Mode">🌙</button>
     </header>
 
-    <aside class="side-bar">
-        <button class="side-bar-close-btn" aria-label="Toggle Side Bar">
-            <span class="side-bar-icon">
-                <span></span>
-                <span></span>
-                <span></span>
-            </span>
-        </button>
+    <aside id="sideBar" class="side-bar">
+        <button id="sideBarCloseBtn">&times;</button>
         <nav>
             <ul>
                 <li>
@@ -30,14 +26,14 @@
                     <a href="projects.html">Projects</a>
                 </li>
                 <li>
-                    <a href="#">Contact</a>
-                    <ul>
+                    <a href="#" class="contact-toggle" id="contactToggle">Contact</a>
+                    <ul id="contactSubmenu">
                         <li><a href="tel:01062363578">Phone</a></li>
-                        <li><a href="https://github.com/BJDG-CM/">GitHub</a></li>
+                        <li><a href="https://github.com/BJDG-CM/" target="_blank">GitHub</a></li>
                         <li><a href="mailto:yejuneric@gmail.com">Gmail</a></li>
                         <li><a href="mailto:yejun_lee@gm.gist.ac.kr">GISTMail</a></li>
-                        <li><a href="https://www.instagram.com/iyejun150/">Instagram</a></li>
-                        <li><a href="https://wiki.gistory.me/index.php/%EC%9D%B4%EC%98%88%EC%A4%80">INFOWIKI</a></li>
+                        <li><a href="https://www.instagram.com/iyejun150/" target="_blank">Instagram</a></li>
+                        <li><a href="https://wiki.gistory.me/index.php/%EC%9D%B4%EC%98%88%EC%A4%80" target="_blank">INFOWIKI</a></li>
                     </ul>
                 </li>
             </ul>
@@ -45,9 +41,14 @@
     </aside>
 
     <main>
+        <div class="projects-header">
+            <h2>My Projects</h2>
+            <p>지금까지 참여한 프로젝트입니다.</p>
+        </div>
+        
         <section class="project-gallery">
             <article class="project-card">
-                <img src="../images/project1.png" alt="Project 1" class="project-thumbnail">
+                <img src="images/project1.png" alt="Project 1" class="project-thumbnail">
                 <div class="project-content">
                     <h3 class="project-title">GIST Graduation Map</h3>
                     <p class="project-description">
@@ -64,11 +65,9 @@
                     </div>
                 </div>                   
             </article>
-            <!-- Add more project cards as needed -->
-        </section>
-        <section class="project-gallery">
+
             <article class="project-card">
-                <img src="../images/project1.png" alt="Project 1" class="project-thumbnail">
+                <img src="images/project2.png" alt="Project 2" class="project-thumbnail">
                 <div class="project-content">
                     <h3 class="project-title">Personal Profile Page</h3>
                     <p class="project-description">
@@ -85,7 +84,6 @@
                     </div>
                 </div>                   
             </article>
-            <!-- Add more project cards as needed -->
         </section>
     </main>
 

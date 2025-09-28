@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const sideBarToggle = document.getElementById('sideBarToggle');
     const sideBarCloseBtn = document.getElementById('sideBarCloseBtn'); 
     const overlay = document.getElementById('overlay');
+    const menuToggle = document.getElementById('menuToggle');
     const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");  
     const savedTheme = localStorage.getItem('theme');
 
@@ -32,18 +33,45 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    sideBarToggle.addEventListener('click', () => {
-        sideBar.classList.add('open');
-        overlay.classList.add('active');
-    });
+    // 메뉴 토글 버튼 이벤트
+    if (menuToggle) {
+        menuToggle.addEventListener('click', () => {
+            const isOpen = sideBar.classList.contains('open');
+            
+            if (isOpen) {
+                // 사이드바 닫기
+                sideBar.classList.remove('open');
+                overlay.classList.remove('active');
+                menuToggle.classList.remove('active');
+            } else {
+                // 사이드바 열기
+                sideBar.classList.add('open');
+                overlay.classList.add('active');
+                menuToggle.classList.add('active');
+            }
+        });
+    }
 
-    sideBarCloseBtn.addEventListener('click', () => {
+    function closeSideBar() {
         sideBar.classList.remove('open');
         overlay.classList.remove('active');
-    });
+        if (menuToggle) {
+            menuToggle.classList.remove('active');
+        }
+    }
 
-    overlay.addEventListener('click', () => {
-        sideBar.classList.remove('open');
-        overlay.classList.remove('active');
-    });
+    sideBarCloseBtn.addEventListener('click', closeSideBar);
+    overlay.addEventListener('click', closeSideBar);
+
+ 
+    const contactToggle = document.getElementById('contactToggle');
+    const contactSubmenu = document.getElementById('contactSubmenu');
+
+    if (contactToggle && contactSubmenu) {
+        contactToggle.addEventListener('click', (e) => {
+            e.preventDefault();
+            contactToggle.classList.toggle('active');
+            contactSubmenu.classList.toggle('show');
+        });
+    }
 });    

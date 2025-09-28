@@ -5,24 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Introduce Page</title>
-    <link rel="stylesheet" href="../style.css">
-    <script src="../script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 
-<body>
+<body class="index">
     <header>
+        <div id="overlay"></div>
+        <button id="menuToggle" class="menu-toggle" aria-label="Toggle Menu">☰</button>
         <h1>Home</h1>
         <button id="darkModeToggle" aria-label="Toggle Dark Mode">🌙</button>
     </header>
     <main>
-        <aside class="side-bar">
-            <button class="side-bar-close-btn" aria-label="Toggle Side Bar">
-                <span class="side-bar-icon">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </span>
-            </button>
+        <aside id="sideBar" class="side-bar">
+            <button id="sideBarCloseBtn">&times;</button>
             <nav>
                 <ul>
                     <li>
@@ -32,14 +28,14 @@
                         <a href="projects.html">Projects</a>
                     </li>
                     <li>
-                        <a href="#">Contact</a>
-                        <ul>
+                        <a href="#" class="contact-toggle" id="contactToggle">Contact</a>
+                        <ul id="contactSubmenu">
                             <li><a href="tel:01062363578">Phone</a></li>
-                            <li><a href="https://github.com/BJDG-CM/">GitHub</a></li>
+                            <li><a href="https://github.com/BJDG-CM/" target="_blank">GitHub</a></li>
                             <li><a href="mailto:yejuneric@gmail.com">Gmail</a></li>
                             <li><a href="mailto:yejun_lee@gm.gist.ac.kr">GISTMail</a></li>
-                            <li><a href="https://www.instagram.com/iyejun150/#">Instagram</a></li>
-                            <li><a href="https://wiki.gistory.me/index.php/%EC%9D%B4%EC%98%88%EC%A4%80">INFOWIKI</a></li>
+                            <li><a href="https://www.instagram.com/iyejun150/#" target="_blank">Instagram</a></li>
+                            <li><a href="https://wiki.gistory.me/index.php/%EC%9D%B4%EC%98%88%EC%A4%80" target="_blank">INFOWIKI</a></li> // contact 취지에 안맞음
                         </ul>
                     </li>       
                 </ul>
@@ -48,11 +44,10 @@
     </main>
 
     <section class="content">
-        <h1>이예준</h1>
-        <h3>Yejun Lee</h3>
+        <h1>이예준 (Yejun Lee)</h1>
         <h4>Frontend Developer</h4>
-        <p>안녕하세요! Contact의 연락처로 연락부탁드립니다☺️</p>
-        <img src="../images/profileImage.png" alt="Profile Picture" class="profile-image">
+        <p>안녕하세요! Contact로 연락 부탁드립니다☺️</p>
+        <img src="images/profileImage.png" alt="Profile Picture" class="profile-image">
 
     </section>
 
