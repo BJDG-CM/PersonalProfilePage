@@ -444,6 +444,7 @@ body.projects main {
     width: 100%;
     max-width: 1500px;
     justify-items: center;
+    align-items: stretch;
 }
 
 .project-card {
@@ -456,10 +457,8 @@ body.projects main {
     flex-direction: column;
     transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
     position: relative;
-    aspect-ratio: 4/5;
     width: 100%;
     max-width: 400px;
-    min-height: 480px;
 }
 
 body.dark-mode .project-card {
@@ -640,11 +639,8 @@ body.dark-mode .project-card:hover {
     }
     
     .project-card {
-        aspect-ratio: 3/4;
-        min-height: 450px;
         max-width: none;
     }
-    
     .project-thumbnail {
         height: 200px;
     }
