@@ -663,3 +663,17 @@ body.dark-mode .project-card:hover {
         left: 0;
     }
 }
+
+.project-link.disabled {
+    border-color: #aaaaaa;  
+    color: #aaaaaa;        
+}
+
+
+.project-link.disabled:hover {
+    background-color: #aaaaaa; 
+    border-color: #aaaaaa;
+    color: white;
+    transform: translateY(-2px); 
+    box-shadow: none; 
+}
